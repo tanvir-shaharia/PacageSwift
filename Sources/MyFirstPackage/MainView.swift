@@ -57,7 +57,7 @@ public struct MainView: View {
                             .foregroundColor(.white)
                         HStack{
                             Button {
-                                makePhoneCall(phoneNumber: contract.number)
+                                print("clicked")
                             } label: {
                                 Image(systemName: "phone.down.circle")
                                     .font(.largeTitle)
@@ -79,16 +79,6 @@ public struct MainView: View {
                 }
             }
         }
-    }
-   public func makePhoneCall(phoneNumber:String) {
-        guard let phoneURL = URL(string: "tel://+88\(phoneNumber)"),
-              UIApplication.shared.canOpenURL(phoneURL) else {
-            // Handle error or show an alert if the device cannot make a phone call
-            print("Unable to initiate phone call.")
-            return
-        }
-        
-        UIApplication.shared.open(phoneURL, options: [:], completionHandler: nil)
     }
 }
 
