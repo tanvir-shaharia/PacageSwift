@@ -21,7 +21,7 @@ public struct MainView: View {
                 .padding()
                 .font(.title)
                 .foregroundColor(.blue)
-            Image(systemName: "person.fill")
+            Image("tanvir")
                 .resizable()
                 .foregroundColor(.gray)
                 .font(.title)
