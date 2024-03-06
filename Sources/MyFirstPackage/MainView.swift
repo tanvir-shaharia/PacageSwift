@@ -12,14 +12,16 @@ public struct MainView: View {
  public init() {} 
     @available(macOS 10.15, *)
     public var body: some View {
-        Text("Package is now working")
-            .padding()
-            .font(.title)
-            .foregroundColor(.blue)
-        Text("Package is now working")
-            .padding()
-            .font(.title)
-            .foregroundColor(.blue)
+        VStack{
+            Text("Package is now working")
+                .padding()
+                .font(.title)
+                .foregroundColor(.blue)
+            Text("Package is now working number 2")
+                .padding()
+                .font(.title)
+                .foregroundColor(.blue)
+        }
     }
 }
 
