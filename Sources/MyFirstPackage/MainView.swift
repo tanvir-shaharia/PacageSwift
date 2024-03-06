@@ -12,21 +12,24 @@ import SwiftUI
 public struct MainView: View {
  public init() {}
     public var body: some View {
-        VStack{
-            Text("Package is now working")
-                .padding()
-                .font(.title)
-                .foregroundColor(.blue)
-            Text("Package is now working number 2")
-                .padding()
-                .font(.title)
-                .foregroundColor(.blue)
-            Image("GM")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .foregroundColor(.gray)
-                .frame(width: 100, height: 100)
-            
+        ZStack{
+            Color(.blue)
+            VStack{
+                Text("Package is now working")
+                    .padding()
+                    .font(.title)
+                    .foregroundColor(.blue)
+                Text("Package is now working number 2")
+                    .padding()
+                    .font(.title)
+                    .foregroundColor(.blue)
+                Image(systemName: "person")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .foregroundColor(.gray)
+                    .frame(width: 100, height: 100)
+                
+            }
         }
     }
 }
