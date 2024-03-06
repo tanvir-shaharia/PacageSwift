@@ -25,6 +25,7 @@ public struct MainView: View {
                 .resizable()
                 .foregroundColor(.gray)
                 .font(.title)
+                .frame(width: 40,height: 40)
             
         }
     }
