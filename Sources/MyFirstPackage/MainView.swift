@@ -11,6 +11,7 @@ import SwiftUI
 @available(iOS 16.0, *)
 public struct MainView: View {
  public init() {}
+    @State private var isFullScreen : Bool = false
     public var body: some View {
         ZStack{
             Color(.blue)
@@ -29,10 +30,20 @@ public struct MainView: View {
                     .foregroundColor(.gray)
                     .frame(width: 100, height: 100)
                     .onTapGesture {
-                        print("Button clicked")
+                        isFullScreen.toggle()
                     }
                 
             }
+        }
+        .fullScreenCover(isPresented: $isFullScreen) {
+           Text("Another screen is working")
+           Text("Exit")
+                .font(.title2)
+                .bold()
+                .padding()
+                .onTapGesture {
+                    isFullScreen.toggle()
+                }
         }
     }
 }
