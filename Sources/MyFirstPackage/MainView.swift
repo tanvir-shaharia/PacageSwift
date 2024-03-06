@@ -28,6 +28,9 @@ public struct MainView: View {
                     .aspectRatio(contentMode: .fit)
                     .foregroundColor(.gray)
                     .frame(width: 100, height: 100)
+                    .onTapGesture {
+                        print("Button clicked")
+                    }
                 
             }
         }
