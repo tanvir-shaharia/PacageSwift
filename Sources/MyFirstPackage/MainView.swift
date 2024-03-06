@@ -7,10 +7,10 @@
 
 import SwiftUI
 
+@available(macOS 11.0, *)
 @available(iOS 16.0, *)
 public struct MainView: View {
- public init() {} 
-    @available(macOS 10.15, *)
+ public init() {}
     public var body: some View {
         VStack{
             Text("Package is now working")
@@ -21,6 +21,11 @@ public struct MainView: View {
                 .padding()
                 .font(.title)
                 .foregroundColor(.blue)
+            Image(systemName: "person.fill")
+                .resizable()
+                .foregroundColor(.gray)
+                .font(.title)
+            
         }
     }
 }
