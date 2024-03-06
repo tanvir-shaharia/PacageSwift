@@ -21,13 +21,20 @@ public struct MainView: View {
                 .padding()
                 .font(.title)
                 .foregroundColor(.blue)
-            Image("tanvir")
+            Image("GM")
                 .resizable()
+                .aspectRatio(contentMode: .fit)
                 .foregroundColor(.gray)
-                .font(.title)
-                .frame(width: 40,height: 40)
+                .frame(width: 100, height: 100)
             
         }
+    }
+}
+@available(iOS 16.0, *)
+@available(macOS 11.0, *)
+struct MainView_Previews : PreviewProvider{
+    static var previews: some View {
+        MainView()
     }
 }
 
