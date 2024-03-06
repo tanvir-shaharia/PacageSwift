@@ -14,7 +14,7 @@ public struct MainView: View {
     @State private var isFullScreen : Bool = false
     public var body: some View {
         ZStack{
-            Color(.blue)
+            Color(.gray)
             VStack{
                 Text("Package is now working")
                     .padding()
